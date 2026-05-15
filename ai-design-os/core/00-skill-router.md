@@ -52,12 +52,11 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 1 — New Project Design Setup
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `04-reference-analysis-rules.md` *(Phase 2)*, `05-visual-identity-rules.md` *(Phase 2)*, `06-design-token-rules.md` *(Phase 2)*, `07-typography-rules.md` *(Phase 2)*, `08-layout-system-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `10-interaction-state-rules.md` *(Phase 3)*, `11-responsive-design-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `04-reference-analysis-rules.md`, `05-visual-identity-rules.md`, `06-design-token-rules.md`, `07-typography-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `11-responsive-design-rules.md`, `12-accessibility-rules.md`
 **Required Project Files:** None — this task creates them.
 
 **Expected Output:**
-`/docs/design-system/product-brief.md`, `visual-direction.md`, `design-tokens.md`, `component-map.md`, `page-architecture.md`
+`/docs/design-system/product-brief.md`, `visual-direction.md`, `design-tokens.md`, `component-map.md`, `page-architecture.md`, `/docs/references/reference-analysis.md` (if references are provided or selected during setup)
 
 **Do-Not-Start Condition:** None — this is the initialization task.
 
@@ -83,8 +82,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 3 — Reference Analysis
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `03-anti-ai-aesthetic-rules.md`, `04-reference-analysis-rules.md` *(Phase 2)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `03-anti-ai-aesthetic-rules.md`, `04-reference-analysis-rules.md`
 **Required Project Files:** `product-brief.md` *(Major Risk if missing)*
 
 **Expected Output:** `/docs/references/reference-analysis.md` (created or updated)
@@ -98,8 +96,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 4 — Visual Direction Creation
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `05-visual-identity-rules.md` *(Phase 2)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `05-visual-identity-rules.md`
 **Required Project Files:** `product-brief.md` *(Blocker)*, `reference-analysis.md` *(Major Risk if missing)*
 
 **Expected Output:** `/docs/design-system/visual-direction.md`
@@ -113,8 +110,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 5 — Design Token Creation
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `05-visual-identity-rules.md` *(Phase 2)*, `06-design-token-rules.md` *(Phase 2)*, `07-typography-rules.md` *(Phase 2)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `05-visual-identity-rules.md`, `06-design-token-rules.md`, `07-typography-rules.md`
 **Required Project Files:** `visual-direction.md` *(Blocker)*, `product-brief.md` *(Blocker)*, `reference-analysis.md` *(if available)*
 
 **Expected Output:** `/docs/design-system/design-tokens.md`, platform token files (CSS variables, Tailwind config, or equivalent)
@@ -128,8 +124,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 6 — Component Map Creation
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `09-component-architecture-rules.md` *(Phase 3)*, `10-interaction-state-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `12-accessibility-rules.md`
 **Required Project Files:** `product-brief.md` *(Blocker)*, `visual-direction.md` *(Blocker)*, `design-tokens.md` *(Blocker)*, `page-architecture.md` *(Major Risk if missing)*
 
 **Expected Output:** `/docs/design-system/component-map.md`
@@ -143,8 +138,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 7 — Page Architecture Creation
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `08-layout-system-rules.md` *(Phase 2)*, `11-responsive-design-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `08-layout-system-rules.md`, `11-responsive-design-rules.md`
 **Required Project Files:** `product-brief.md` *(Blocker)*, `visual-direction.md` *(Major Risk if missing)*, `component-map.md` *(Major Risk if missing)*
 
 **Expected Output:** `/docs/design-system/page-architecture.md`
@@ -158,8 +152,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 8 — Component Implementation
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `10-interaction-state-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*, `13-frontend-implementation-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `12-accessibility-rules.md`, `13-frontend-implementation-rules.md`
 **Required Project Files:** `design-tokens.md` *(Blocker)*, `component-map.md` *(Major Risk if missing)*
 
 **Expected Output:** Implemented reusable component(s) with variants, states, accessibility, token usage, and implementation report.
@@ -173,8 +166,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 9 — Page Implementation
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `06-design-token-rules.md` *(Phase 2)*, `08-layout-system-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `10-interaction-state-rules.md` *(Phase 3)*, `11-responsive-design-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*, `13-frontend-implementation-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `06-design-token-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `11-responsive-design-rules.md`, `12-accessibility-rules.md`, `13-frontend-implementation-rules.md`
 **Required Project Files:** `visual-direction.md` *(Blocker)*, `design-tokens.md` *(Blocker)*, `component-map.md` *(Blocker)*, `page-architecture.md` *(Blocker)*
 
 **Expected Output:** Assembled page using existing components with states, responsive behavior, accessibility, and implementation report.
@@ -188,8 +180,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 10 — Redesign / Cleanup
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `08-layout-system-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `14-design-review-checklist.md`, `15-final-polish-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `14-design-review-checklist.md`, `15-final-polish-rules.md`
 **Required Project Files:** `visual-direction.md` *(Major Risk)*, `design-tokens.md` *(Major Risk)*, `page-architecture.md` *(Major Risk)*
 
 **Expected Output:** Audited and improved UI with documented changes.
@@ -203,11 +194,11 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 11 — Interaction State Pass
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `10-interaction-state-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `10-interaction-state-rules.md`, `12-accessibility-rules.md`, `14-design-review-checklist.md`
 
 **Required Project Files:** `component-map.md` *(Major Risk if missing)*
 
-**Expected Output:** All missing states implemented. State audit report.
+**Expected Output:** All missing states implemented. `/docs/reviews/state-review.md` containing: state matrix (per component/section: pass/fail), missing states found (with severity), states implemented, unresolved state risks, and do-not-ship state conditions triggered (Yes/No).
 
 **Do-Not-Start Condition:** None blocking.
 
@@ -218,7 +209,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 12 — Responsive Review
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `08-layout-system-rules.md` *(Phase 2)*, `11-responsive-design-rules.md` *(Phase 3)*, `14-design-review-checklist.md`
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `08-layout-system-rules.md`, `11-responsive-design-rules.md`, `14-design-review-checklist.md`
 
 **Required Project Files:** `page-architecture.md` *(Major Risk if missing)*, `component-map.md` *(Major Risk if missing)*
 
@@ -233,7 +224,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 13 — Accessibility Review
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `10-interaction-state-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*, `14-design-review-checklist.md`
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `10-interaction-state-rules.md`, `12-accessibility-rules.md`, `14-design-review-checklist.md`
 
 **Required Project Files:** None blocking — accessibility rules are universal.
 
@@ -263,8 +254,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 15 — Final Polish
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `03-anti-ai-aesthetic-rules.md`, `14-design-review-checklist.md`, `15-final-polish-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `03-anti-ai-aesthetic-rules.md`, `14-design-review-checklist.md`, `15-final-polish-rules.md`
 **Required Project Files:** `visual-direction.md` *(Major Risk)*, `design-tokens.md` *(Major Risk)*
 
 **Expected Output:** Targeted polish improvements. `/docs/reviews/final-polish-report.md`
@@ -282,7 +272,19 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 
 **Required Project Files:** `page-architecture.md` *(Minor Risk if missing)*
 
-**Expected Output:** Visual QA report. `/docs/reviews/visual-qa-report.md`. Fixes for failed items.
+**Expected Output:** `/docs/reviews/visual-qa-report.md` with all Critical failures fixed before marking complete. Required report format:
+
+```
+Visual QA Report:
+- Screens reviewed
+- Breakpoints reviewed: 320px / 375px / 768px / 1024px / 1440px
+- States reviewed
+- Issues found by severity (Critical / Major / Minor)
+- Screenshots or visual evidence location if available
+- Fixes applied
+- Remaining risks
+- Do-not-ship conditions triggered: Yes/No
+```
 
 **Do-Not-Start Condition:** None blocking.
 
@@ -293,8 +295,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 17 — Mobile App UI Task
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `06-design-token-rules.md` *(Phase 2)*, `08-layout-system-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `10-interaction-state-rules.md` *(Phase 3)*, `11-responsive-design-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*, `13-frontend-implementation-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `06-design-token-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `11-responsive-design-rules.md`, `12-accessibility-rules.md`, `13-frontend-implementation-rules.md`
 **Required Project Files:** `product-brief.md` *(Blocker)*, `visual-direction.md` *(Blocker)*, `design-tokens.md` *(Blocker)*, `component-map.md` *(Blocker)*, `page-architecture.md` *(Blocker)*
 
 **Expected Output:** Mobile-first implementation with touch targets ≥44px, navigation transformation, mobile state feedback, mobile accessibility.
@@ -308,8 +309,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 18 — Desktop App UI Task
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `06-design-token-rules.md` *(Phase 2)*, `08-layout-system-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `10-interaction-state-rules.md` *(Phase 3)*, `11-responsive-design-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*, `13-frontend-implementation-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `06-design-token-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `11-responsive-design-rules.md`, `12-accessibility-rules.md`, `13-frontend-implementation-rules.md`
 **Required Project Files:** `product-brief.md` *(Blocker)*, `visual-direction.md` *(Blocker)*, `design-tokens.md` *(Blocker)*, `component-map.md` *(Blocker)*, `page-architecture.md` *(Blocker)*
 
 **Expected Output:** Desktop-optimized implementation with multi-pane layouts, keyboard behavior, desktop focus management, high-density UI where appropriate.
@@ -323,11 +323,11 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 19 — Landing Page Task
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `05-visual-identity-rules.md` *(Phase 2)*, `06-design-token-rules.md` *(Phase 2)*, `07-typography-rules.md` *(Phase 2)*, `08-layout-system-rules.md` *(Phase 2)*, `11-responsive-design-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*, `13-frontend-implementation-rules.md` *(Phase 3)*
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `05-visual-identity-rules.md`, `06-design-token-rules.md`, `07-typography-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `11-responsive-design-rules.md`, `12-accessibility-rules.md`, `13-frontend-implementation-rules.md`
 
 **Required Project Files:** `product-brief.md` *(Blocker)*, `visual-direction.md` *(Blocker)*, `design-tokens.md` *(Blocker)*
 
-**Expected Output:** Product-specific landing page — not a generic SaaS template — with clear hierarchy, responsive layout, accessible interaction.
+**Expected Output:** Product-specific landing page — not a generic SaaS template — with clear hierarchy, responsive layout, accessible interaction, component reuse, and all required interaction states.
 
 **Do-Not-Start Condition:** Missing `visual-direction.md` is a **Blocker** — landing pages are visually identity-forward.
 
@@ -338,8 +338,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 20 — Data-Heavy Dashboard / Table / Chart Task
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `06-design-token-rules.md` *(Phase 2)*, `07-typography-rules.md` *(Phase 2)*, `08-layout-system-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `10-interaction-state-rules.md` *(Phase 3)*, `11-responsive-design-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*, `13-frontend-implementation-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `02-design-principles.md`, `03-anti-ai-aesthetic-rules.md`, `06-design-token-rules.md`, `07-typography-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `11-responsive-design-rules.md`, `12-accessibility-rules.md`, `13-frontend-implementation-rules.md`
 **Required Project Files:** `product-brief.md` *(Major Risk)*, `visual-direction.md` *(Major Risk)*, `design-tokens.md` *(Blocker)*, `component-map.md` *(Blocker)*, `page-architecture.md` *(Major Risk)*
 
 **Expected Output:** Data display implementation with loading/empty/error states, responsive table strategy, readable numeric hierarchy, accessible data tables.
@@ -353,8 +352,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 21 — Form-Heavy UI Task
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `10-interaction-state-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*, `13-frontend-implementation-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `12-accessibility-rules.md`, `13-frontend-implementation-rules.md`
 **Required Project Files:** `design-tokens.md` *(Major Risk if missing)*, `component-map.md` *(Major Risk if missing)*
 
 **Expected Output:** Form implementation with all validation states, accessible labels, error associations, keyboard navigation, responsive layout.
@@ -368,7 +366,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 22 — Design System Update Task
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md` *(Phase 2)*, `07-typography-rules.md` *(Phase 2)*, `08-layout-system-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `14-design-review-checklist.md`
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md`, `07-typography-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `14-design-review-checklist.md`
 
 **Required Project Files:** `design-tokens.md` *(Blocker)*, `component-map.md` *(Blocker)*, `visual-direction.md` *(Blocker)*
 
@@ -383,8 +381,7 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 ### Task 23 — Component Library Creation Task
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md` *(Phase 2)*, `07-typography-rules.md` *(Phase 2)*, `09-component-architecture-rules.md` *(Phase 3)*, `10-interaction-state-rules.md` *(Phase 3)*, `11-responsive-design-rules.md` *(Phase 3)*, `12-accessibility-rules.md` *(Phase 3)*, `13-frontend-implementation-rules.md` *(Phase 3)*
-
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md`, `07-typography-rules.md`, `09-component-architecture-rules.md`, `10-interaction-state-rules.md`, `11-responsive-design-rules.md`, `12-accessibility-rules.md`, `13-frontend-implementation-rules.md`
 **Required Project Files:** `design-tokens.md` *(Blocker)*, `component-map.md` *(Blocker)*, `visual-direction.md` *(Blocker)*
 
 **Expected Output:** Organized component library following the primitive / layout / domain / state layer taxonomy, with all required variants and states.
@@ -422,16 +419,6 @@ If a task cannot be clearly classified:
 
 ---
 
-## Missing Phase 2/3 Files
-
-Tasks that require Phase 2 or Phase 3 files (marked with *Phase 2* or *Phase 3*) will not have those files available until those phases are complete. If a task requires files that do not yet exist:
-
-1. State which files are unavailable.
-2. Apply the rules and principles already established in Phase 1 files.
-3. Document which constraints could not be verified.
-4. Flag for re-review once missing phase files are created.
-
----
 
 ## Router Quality Gate
 

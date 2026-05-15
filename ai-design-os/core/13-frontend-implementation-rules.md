@@ -17,7 +17,7 @@ Define implementation discipline for all frontend UI work. Enforce token usage, 
 ## Required Inputs
 
 - Project's `design-tokens.md` — **Blocker** if missing. All styling requires tokens.
-- Project's `component-map.md` — **Major Risk** if missing. Reuse cannot be verified without it.
+- Project's `component-map.md` — severity depends on task type: **Blocker** for full page implementation (Tasks 9, 17, 18, 20, 23); **Major Risk** for small isolated patches. Canonical table in `01-agent-operating-protocol.md`.
 
 For full pre-implementation planning requirements, see `01-agent-operating-protocol.md`.
 
@@ -40,8 +40,8 @@ Before writing any code, verify the following and produce a plan per `01-agent-o
 | Task type identified | Per `00-skill-router.md` |
 | Relevant skill files read | Per routing table |
 | `design-tokens.md` | Found — or Blocker |
-| `component-map.md` | Found — or Major Risk |
-| `visual-direction.md` | Found for page or style tasks — or Major Risk |
+| `component-map.md` | Found — or Blocker / Major Risk per task type (see `01-agent-operating-protocol.md`) |
+| `visual-direction.md` | Found for page or style tasks — or Blocker (see `01-agent-operating-protocol.md`) |
 | `page-architecture.md` | Found for full page tasks — or Blocker |
 | Component plan produced | Which exist, which are new, and why |
 | State plan produced | Which states each section requires |
@@ -218,13 +218,13 @@ If any command fails: report it explicitly in "Tests / Build Commands Run." Do n
 
 ## Quality Gate
 
-Do not mark a task complete if:
+Do not mark a task complete if any of the following are true:
 
-- [ ] Implementation uses hardcoded visual values instead of design tokens.
-- [ ] Component duplication was introduced alongside existing components.
-- [ ] Responsive behavior was not tested or defined.
-- [ ] Accessibility requirements were ignored or deferred.
-- [ ] Data states (loading, empty, error) are missing from any data-driven section.
-- [ ] A monolithic page file was created with inline visual systems.
-- [ ] Project design system files were available but were not applied.
-- [ ] `14-design-review-checklist.md` was not run.
+- Implementation uses hardcoded visual values instead of design tokens.
+- Component duplication was introduced alongside existing components.
+- Responsive behavior was not tested or defined.
+- Accessibility requirements were ignored or deferred.
+- Data states (loading, empty, error) are missing from any data-driven section.
+- A monolithic page file was created with inline visual systems.
+- Project design system files were available but were not applied.
+- `14-design-review-checklist.md` was not run.

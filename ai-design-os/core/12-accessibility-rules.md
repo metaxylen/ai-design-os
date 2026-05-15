@@ -230,16 +230,16 @@ Do not use ARIA when native HTML solves the problem.
 
 All conditions below are **Critical**. Any single failure blocks shipping until fixed.
 
-Do not ship if:
+Do not ship if any of the following are true:
 
-- [ ] Focus is invisible on any keyboard-reachable element.
-- [ ] Any form input has no associated visible label.
-- [ ] A `div` or `span` is used as a primary interactive control without full keyboard and ARIA behavior.
-- [ ] A modal, dialog, or drawer does not trap focus while open.
-- [ ] A modal, dialog, or drawer does not return focus to the trigger on close.
-- [ ] Status is communicated by color only — no text or icon confirms the meaning.
-- [ ] Primary navigation is not keyboard accessible.
-- [ ] Any critical error is not programmatically announced or discoverable by keyboard users.
+- Focus is invisible on any keyboard-reachable element.
+- Any form input has no associated visible label.
+- A `div` or `span` is used as a primary interactive control without full keyboard and ARIA behavior.
+- A modal, dialog, or drawer does not trap focus while open.
+- A modal, dialog, or drawer does not return focus to the trigger on close.
+- Status is communicated by color only — no text or icon confirms the meaning.
+- Primary navigation is not keyboard accessible.
+- Any critical error is not programmatically announced or discoverable by keyboard users.
 
 ---
 

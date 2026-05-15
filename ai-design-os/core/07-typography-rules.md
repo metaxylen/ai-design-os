@@ -110,7 +110,7 @@ Every text element must use one of the defined roles. Roles are mapped to token 
 4. Tappable text links must meet 44px minimum touch target height.
 5. Verify text behavior at 320px width — text overflow or text smaller than 11px is a failure.
 
-**Scope boundary:** This section governs typography-specific behavior — text size minimums, hierarchy at small viewports, and text overflow. Layout-level responsive behavior, breakpoint strategy, navigation transformation, and grid collapse are governed by `11-responsive-design-rules.md` *(Phase 3)*. Once `11` is available, apply its breakpoint rules for layout and apply this file's rules for text readability and typography at those breakpoints.
+**Scope boundary:** This section governs typography-specific behavior — text size minimums, hierarchy at small viewports, and text overflow. Layout-level responsive behavior, breakpoint strategy, navigation transformation, and grid collapse are governed by `11-responsive-design-rules.md`. Apply its breakpoint rules for layout and apply this file's rules for text readability and typography at those breakpoints.
 
 ### Desktop Dense Typography
 1. Dense productivity UI may use smaller base sizes (13–14px body) when contrast is sufficient and density is intentional per `visual-direction.md`.
@@ -178,7 +178,7 @@ When typography failures are detected:
 1. Identify which roles are collapsing into each other and why.
 2. Adjust size, weight, or line-height to create distinction. Do not apply color as the primary fix.
 3. Verify type tokens in `design-tokens.md` reflect the corrected hierarchy.
-4. After token corrections, verify that affected components render correctly with the updated values. Component-level changes follow `09-component-architecture-rules.md` *(Phase 3, when available)*.
+4. After token corrections, verify that affected components render correctly with the updated values. Component-level changes follow `09-component-architecture-rules.md`.
 5. Re-verify hierarchy at mobile breakpoints after desktop corrections — what appears distinct on desktop may collapse on mobile.
 
 ---

@@ -462,7 +462,7 @@ Agents must read `page-architecture.md` for page-specific decisions. This file g
 
 ## Responsive Behavior
 
-Every layout model must be adapted at all breakpoints. Responsive behavior rules for each layout model are governed by `11-responsive-design-rules.md` *(Phase 3)*. Until `11-responsive-design-rules.md` is available, apply these minimum requirements:
+Every layout model must be adapted at all breakpoints. Responsive behavior rules for each layout model are governed by `11-responsive-design-rules.md`. Required for every layout implementation:
 
 - Define the mobile navigation pattern for every page.
 - Define how the grid or panels collapse at tablet and mobile.

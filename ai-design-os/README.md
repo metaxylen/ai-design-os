@@ -38,7 +38,6 @@ AI Design OS provides the constraint layer that every UI task must pass through 
 - Not a React/Tailwind-only system
 - Not Claude-only, Codex-only, Cursor-only, Antigravity-only, Blackbox-only, or MiniMax-only
 - Not a license to copy references
-- Not production-finalized — a whole-system audit (Phase 5) and final patch cycle (Phase 6) are still pending
 
 ---
 
@@ -189,8 +188,13 @@ For any UI implementation task:
 | `design-tokens.md` | `/docs/design-system/` | Semantic token system for all visual values |
 | `component-map.md` | `/docs/design-system/` | Component inventory: primitive, layout, domain, state |
 | `page-architecture.md` | `/docs/design-system/` | Per-page layout model, sections, states, responsive behavior |
-| `design-review.md` | `/docs/reviews/` | Output of `14-design-review-checklist.md` |
+| `design-review.md` | `/docs/reviews/` | Output of `14-design-review-checklist.md` (full review) |
 | `final-polish-report.md` | `/docs/reviews/` | Output of final polish pass |
+| `anti-ai-aesthetic-review.md` | `/docs/reviews/` | Output of standalone anti-AI aesthetic review (Task 14) |
+| `state-review.md` | `/docs/reviews/` | Output of interaction state pass (Task 11) |
+| `responsive-review.md` | `/docs/reviews/` | Output of responsive review pass (Task 12) |
+| `accessibility-review.md` | `/docs/reviews/` | Output of accessibility review (Task 13) |
+| `visual-qa-report.md` | `/docs/reviews/` | Output of visual QA / screenshot review (Task 16) |
 
 These files are created and maintained in the project repository. They are not part of the AI Design OS core. Core files reference them by name — they do not contain their content.
 

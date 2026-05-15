@@ -366,7 +366,7 @@ Audit the implementation for generic AI-generated visual patterns. Enforce that 
 - `14-design-review-checklist.md`
 
 ### Expected Output
-`/docs/reviews/design-review.md` (or anti-AI section within it). All forbidden pattern findings documented. All remediations applied before proceeding.
+If run as part of a full design review (Task 14 combined with Task 15): findings included in `/docs/reviews/design-review.md`. If run as a standalone anti-AI-aesthetic review (Task 14 only): `/docs/reviews/anti-ai-aesthetic-review.md`. All forbidden pattern findings documented. All remediations applied before proceeding.
 
 ### Quality Gate
 The AI smell diagnostic checklist from `03-anti-ai-aesthetic-rules.md` produces no "yes" answers without a documented remediation plan. No hard forbidden pattern is present without a valid Exception Approval documented in `visual-direction.md` following the five-field format.

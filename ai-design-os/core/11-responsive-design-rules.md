@@ -212,17 +212,17 @@ Tables and data displays require an explicit mobile strategy. Choose one:
 
 All conditions below are **Critical**. Any single failure blocks shipping until fixed.
 
-Do not ship if:
+Do not ship if any of the following are true:
 
-- [ ] Any page has horizontal overflow at 320px, 375px, 768px, 1024px, or 1440px — unless the overflow is part of an explicitly designed horizontal-scroll data-table strategy.
-- [ ] Mobile behavior is undefined for any page or component that ships to mobile users.
-- [ ] The desktop layout is merely scaled down on mobile without content reprioritization.
-- [ ] Primary navigation disappears or becomes inaccessible on mobile.
-- [ ] Primary mobile navigation uses icon-only items without visible labels.
-- [ ] Any mobile interactive element has touch targets below 44×44px.
-- [ ] Tables or data displays have no defined mobile strategy.
-- [ ] Modals, drawers, or sheets do not fit within mobile viewport dimensions.
-- [ ] Forms are not single-column on mobile.
+- Any page has horizontal overflow at 320px, 375px, 768px, 1024px, or 1440px — unless the overflow is part of an explicitly designed horizontal-scroll data-table strategy.
+- Mobile behavior is undefined for any page or component that ships to mobile users.
+- The desktop layout is merely scaled down on mobile without content reprioritization.
+- Primary navigation disappears or becomes inaccessible on mobile.
+- Primary mobile navigation uses icon-only items without visible labels.
+- Any mobile interactive element has touch targets below 44×44px.
+- Tables or data displays have no defined mobile strategy.
+- Modals, drawers, or sheets do not fit within mobile viewport dimensions.
+- Forms are not single-column on mobile.
 
 ---
 

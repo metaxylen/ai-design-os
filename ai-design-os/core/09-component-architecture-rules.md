@@ -23,7 +23,9 @@ Enforce component layering, reuse discipline, and creation standards. Prevent co
 
 If `component-map.md` is missing during **full page implementation (Task 9)** or **component library creation (Task 23)**: **Blocker** per `00-skill-router.md` and `01-agent-operating-protocol.md`. Do not proceed. Create or request the file before starting implementation.
 
-If `component-map.md` is missing during a **small isolated component patch** or **limited local UI cleanup** where no reusable component decision is required: **Major Risk**. Document the assumption. Do not create new reusable components without confirming the existing inventory first.
+If `component-map.md` is missing during **component implementation (Task 8)** where reusable components are being created or modified, shared primitives are changed, or the component system is affected: **Blocker**. Agents may not reclassify a component-system task as a small isolated patch to avoid this requirement.
+
+If `component-map.md` is missing during a **small isolated component patch** or **limited local UI cleanup** where no reusable component decision is required and no new reusable components are created: **Major Risk**. Document the assumption. Do not create new reusable components without confirming the existing inventory first.
 
 If `design-tokens.md` is missing: **Blocker** per `01-agent-operating-protocol.md`.
 

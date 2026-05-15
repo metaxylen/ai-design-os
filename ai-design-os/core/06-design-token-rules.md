@@ -183,7 +183,7 @@ Z-index values must be defined as tokens, not as arbitrary numbers in components
 - `bp-lg` — 1024px (desktop)
 - `bp-xl` — 1440px (wide desktop)
 
-Responsive behavior is governed by `11-responsive-design-rules.md` *(Phase 3)*. Breakpoint tokens must be referenced consistently across the implementation.
+Responsive behavior is governed by `11-responsive-design-rules.md`. Breakpoint tokens must be referenced consistently across the implementation.
 
 ---
 

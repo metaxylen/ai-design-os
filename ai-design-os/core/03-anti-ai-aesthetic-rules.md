@@ -144,7 +144,7 @@ For every forbidden pattern, apply the corresponding replacement.
 | Low-contrast gray text | Text using semantic text tokens (`text-primary`, `text-secondary`, `text-muted`) at verified contrast ratios. Check contrast before using muted text at body size. |
 | Identical rounded card grids | Page-specific layout model appropriate to content type. Content type and scanning behavior determine layout — not card-by-default. |
 | Huge hero with vague copy | Page header with specific purpose, clear title, and a dominant primary action. |
-| Flat vertical stacking | App shell structure with sidebar, grid, panels, and sections appropriate to the layout model. Until Phase 2 `08-layout-system-rules.md` is available, use structural grouping and grid-based arrangement. |
+| Flat vertical stacking | App shell structure with sidebar, grid, panels, and sections appropriate to the layout model per `08-layout-system-rules.md`. |
 | Over-rounded components | Radius from the project's token radius scale. Match radius to component type — buttons, cards, and inputs may differ. Avoid maximum radius on everything. |
 | Excessive drop shadows | Borders and background differentiation for surface separation. Reserve shadows for overlays, dropdowns, modals, and genuinely elevated interactive surfaces only. |
 | Random decorative icons | Icons only where they support recognition or action. Every icon must justify its presence. |
@@ -154,7 +154,7 @@ For every forbidden pattern, apply the corresponding replacement.
 | Hardcoded colors | Semantic design tokens from `design-tokens.md`. |
 | Missing interactive states | Full interactive state matrix: default, hover, active, focus-visible, disabled. |
 | Missing data states | Full data state matrix: loading, empty, error. Add success and partial-data where relevant. |
-| Desktop-only layout | Defined responsive strategy at all breakpoints. Until Phase 3 `11-responsive-design-rules.md` is available, define at minimum: mobile nav pattern, grid collapse behavior, and touch target size. |
+| Desktop-only layout | Defined responsive strategy at all breakpoints per `11-responsive-design-rules.md`. |
 | Generic SaaS landing page | Product-specific visual identity, hierarchy, and conversion structure. Every section maps to a real product claim or user task. |
 | Generic dashboard composition | Product-specific KPI summary with real labels and values, a distinct layout model, charts with context and baseline, and complete data states (loading, empty, error). |
 | Generic mobile card list | Task-appropriate layout: list for scannable items, table for structured data, feed for time-ordered content. Cards only where grouping serves the content type. |
@@ -167,16 +167,14 @@ For every forbidden pattern, apply the corresponding replacement.
 When AI aesthetic issues are detected, apply fixes in this order. Do not fix generic design by adding more decoration.
 
 1. **Information architecture first** — Clarify what the screen is for, what matters most, and what the primary action is. Fix this before any visual treatment.
-2. **Layout structure second** — Replace flat stacking with appropriate layout model. Until `08-layout-system-rules.md` *(Phase 2)* is available, use structural grouping, explicit grid layout, and meaningful section separation.
+2. **Layout structure second** — Replace flat stacking with the appropriate layout model from `08-layout-system-rules.md`.
 3. **Typography hierarchy third** — Establish clear distinction between headings, body, labels, and metadata.
 4. **Component consistency fourth** — Replace one-off visual patterns with existing components from `component-map.md`.
 5. **Token discipline fifth** — Replace all hardcoded values with semantic tokens from `design-tokens.md`.
 6. **Interaction states sixth** — Add all missing hover, focus, active, disabled, loading, empty, and error states.
-7. **Responsive behavior seventh** — Define and implement mobile and tablet layouts. Until `11-responsive-design-rules.md` *(Phase 3)* is available, define nav pattern and grid collapse at minimum.
+7. **Responsive behavior seventh** — Define and implement mobile and tablet layouts per `11-responsive-design-rules.md`.
 8. **Accessibility eighth** — Verify semantic HTML, labels, keyboard behavior, and contrast.
 9. **Restrained polish last** — Remove decoration, tighten spacing, remove unnecessary visual noise.
-
-**Phase 1 fallback:** If a referenced Phase 2 or Phase 3 file does not yet exist, apply the strongest available Phase 1 rule from `02-design-principles.md` or this file, and mark the remediation step as partial. Re-run the full remediation after the missing phase file is created.
 
 ---
 

@@ -231,15 +231,15 @@ Unresolved State Risks:
 
 All conditions below are **Critical**. Any single failure blocks shipping until fixed or explicitly escalated with a documented plan.
 
-Do not ship if:
+Do not ship if any of the following are true:
 
-- [ ] Any interactive element has only a default state.
-- [ ] Focus-visible state is missing on any keyboard-reachable element.
-- [ ] Any data-driven section has no loading state.
-- [ ] Any data-driven section has no empty state.
-- [ ] Any data-driven section has no error state.
-- [ ] Any error state has no recovery action.
-- [ ] Any empty state has no next action.
-- [ ] Any disabled element looks identical to the active or default state.
-- [ ] State differentiation uses color only — text or icon must also be used per `12-accessibility-rules.md`.
-- [ ] Any form field has no validation error state.
+- Any interactive element has only a default state.
+- Focus-visible state is missing on any keyboard-reachable element.
+- Any data-driven section has no loading state.
+- Any data-driven section has no empty state.
+- Any data-driven section has no error state.
+- Any error state has no recovery action.
+- Any empty state has no next action.
+- Any disabled element looks identical to the active or default state.
+- State differentiation uses color only — text or icon must also be used per `12-accessibility-rules.md`.
+- Any form field has no validation error state.

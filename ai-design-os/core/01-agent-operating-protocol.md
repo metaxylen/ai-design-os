@@ -159,7 +159,9 @@ Can proceed. Note the missing file in the implementation report and recommend cr
 6. Mark all temporary assumptions as `[TEMPORARY ASSUMPTION — must be validated]`.
 7. Do not present invented design decisions as authoritative.
 
-### Canonical Severity Reference
+### Canonical Severity Reference — Common Required Files
+
+The task-specific severity in `00-skill-router.md` is authoritative when more specific than this table. This table covers common cases — it does not enumerate every task type. Do not use this table to downgrade a Blocker defined by the router.
 
 | Missing File | Context | Severity |
 |---|---|---|
@@ -168,7 +170,7 @@ Can proceed. Note the missing file in the implementation report and recommend cr
 | `product-brief.md` | Reference analysis | Major Risk |
 | `product-brief.md` | Component implementation | Minor Risk |
 | `visual-direction.md` | Design token creation | Blocker |
-| `visual-direction.md` | Page implementation | Major Risk |
+| `visual-direction.md` | Page implementation | Blocker |
 | `design-tokens.md` | Page or component implementation | Blocker |
 | `design-tokens.md` | Final polish | Major Risk |
 | `component-map.md` | Full page implementation | Blocker |

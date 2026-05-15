@@ -23,18 +23,6 @@ Quality gate that audits completed or in-progress UI across all design and engin
 
 ---
 
-## Phase Dependency Notice
-
-Some review categories require Phase 2 or Phase 3 skill files that may not yet exist. Handle missing phase files as follows:
-
-- **Categories fully runnable in Phase 1:** 1 (Product Fit), 2 (Visual Identity), 3 (Information Architecture), 11 (Content / Microcopy), 12 (Production Polish), 13 (Anti-AI-Aesthetic Compliance), 14 (Project-Specific File Compliance).
-- **Categories requiring Phase 2 files:** 4 (Layout — needs `08-layout-system-rules.md`), 5 (Typography — needs `07-typography-rules.md`), 6 (Color / Token Usage — needs `06-design-token-rules.md`).
-- **Categories requiring Phase 3 files:** 7 (Component Reuse — needs `09-component-architecture-rules.md`), 8 (Interaction States — needs `10-interaction-state-rules.md`), 9 (Responsive Behavior — needs `11-responsive-design-rules.md`), 10 (Accessibility — needs `12-accessibility-rules.md`), 15 (Stack Consistency — needs `13-frontend-implementation-rules.md`).
-
-When a required phase file does not yet exist: evaluate the category using the strongest available Phase 1 principle from `02-design-principles.md` or `03-anti-ai-aesthetic-rules.md`, mark the category result as **Partial**, and flag for re-review after the missing phase file is created. Do not skip the category entirely.
-
----
-
 ## Severity Levels
 
 **Critical**
@@ -111,7 +99,7 @@ Rules governed by: `02-design-principles.md`
 
 ### 4. Layout
 
-Rules governed by: `08-layout-system-rules.md` *(Phase 2)*
+Rules governed by: `08-layout-system-rules.md`
 
 - [ ] Is the layout model appropriate for this page type?
 - [ ] Is the page more than unstructured vertical stacking?
@@ -125,7 +113,7 @@ Rules governed by: `08-layout-system-rules.md` *(Phase 2)*
 
 ### 5. Typography
 
-Rules governed by: `07-typography-rules.md` *(Phase 2)*
+Rules governed by: `07-typography-rules.md`
 
 - [ ] Is the type hierarchy clear — headings, body, labels, and metadata are visually distinct?
 - [ ] Are semantic type tokens used from `design-tokens.md`?
@@ -139,7 +127,7 @@ Rules governed by: `07-typography-rules.md` *(Phase 2)*
 
 ### 6. Color / Token Usage
 
-Rules governed by: `06-design-token-rules.md` *(Phase 2)*, `design-tokens.md`
+Rules governed by: `06-design-token-rules.md`, `design-tokens.md`
 
 - [ ] Are semantic tokens used for all color values?
 - [ ] Are there no hardcoded hex, RGB, or raw framework utility classes that bypass the project token system?
@@ -153,7 +141,7 @@ Rules governed by: `06-design-token-rules.md` *(Phase 2)*, `design-tokens.md`
 
 ### 7. Component Reuse
 
-Rules governed by: `09-component-architecture-rules.md` *(Phase 3)*, `component-map.md`
+Rules governed by: `09-component-architecture-rules.md`, `component-map.md`
 
 - [ ] Are existing components reused rather than re-implemented inline?
 - [ ] Are component variants consistent with `component-map.md`?
@@ -166,7 +154,7 @@ Rules governed by: `09-component-architecture-rules.md` *(Phase 3)*, `component-
 
 ### 8. Interaction States
 
-Rules governed by: `10-interaction-state-rules.md` *(Phase 3)*
+Rules governed by: `10-interaction-state-rules.md`
 
 - [ ] Default, hover, active, focus-visible, and disabled states are present on all interactive elements.
 - [ ] Loading state is implemented on all async sections (skeleton or spinner with appropriate choice).
@@ -182,7 +170,7 @@ Rules governed by: `10-interaction-state-rules.md` *(Phase 3)*
 
 ### 9. Responsive Behavior
 
-Rules governed by: `11-responsive-design-rules.md` *(Phase 3)*
+Rules governed by: `11-responsive-design-rules.md`
 
 - [ ] UI is functional at 320px, 375px, 768px, 1024px, and 1440px.
 - [ ] No horizontal overflow at any breakpoint.
@@ -199,7 +187,7 @@ Rules governed by: `11-responsive-design-rules.md` *(Phase 3)*
 
 ### 10. Accessibility
 
-Rules governed by: `12-accessibility-rules.md` *(Phase 3)*
+Rules governed by: `12-accessibility-rules.md`
 
 - [ ] Semantic HTML is used — headings, buttons, links, lists, forms are correct elements.
 - [ ] Buttons are used for actions, anchors for navigation — no div-as-button.
@@ -218,7 +206,7 @@ Rules governed by: `12-accessibility-rules.md` *(Phase 3)*
 
 ### 11. Content / Microcopy
 
-Rules governed by: `02-design-principles.md`, `01-agent-operating-protocol.md` (quality bar), and `15-final-polish-rules.md` *(Phase 3, when available)*. Until `15-final-polish-rules.md` exists, evaluate using Phase 1 principles and mark as Partial.
+Rules governed by: `02-design-principles.md`, `01-agent-operating-protocol.md` (quality bar), and `15-final-polish-rules.md`.
 
 - [ ] All visible text is purposeful and specific to this product.
 - [ ] Empty states explain the context and provide a next action — not just "No data."
@@ -233,7 +221,7 @@ Rules governed by: `02-design-principles.md`, `01-agent-operating-protocol.md` (
 
 ### 12. Production Polish
 
-Rules governed by: `03-anti-ai-aesthetic-rules.md`, `01-agent-operating-protocol.md` (quality bar), and `15-final-polish-rules.md` *(Phase 3, when available)*. Until `15-final-polish-rules.md` exists, evaluate using Phase 1 principles and mark as Partial.
+Rules governed by: `03-anti-ai-aesthetic-rules.md`, `01-agent-operating-protocol.md` (quality bar), and `15-final-polish-rules.md`.
 
 - [ ] Spacing is consistent — no arbitrary gaps between sections or elements.
 - [ ] Alignment is precise — elements align to a consistent grid or baseline.
@@ -277,7 +265,7 @@ Rules governed by: `03-anti-ai-aesthetic-rules.md`
 
 ### 15. Stack / Implementation Consistency
 
-Rules governed by: `13-frontend-implementation-rules.md` *(Phase 3)*
+Rules governed by: `13-frontend-implementation-rules.md`
 
 - [ ] File organization follows project conventions.
 - [ ] Component files are small and composable — no massive page files.
