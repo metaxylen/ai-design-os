@@ -1,6 +1,8 @@
-# AI Design OS
+# AI Design OS + AI Video Factory Control Room
 
 A reusable, agent-agnostic design-engineering control system that forces AI coding agents to produce product-specific, design-system-aware, state-complete, responsive, and accessible UI — consistently across any project type and any capable agent.
+
+This repository also includes **AI Video Factory Control Room**, a working frontend interface created with AI Design OS. It is a dense operations dashboard for managing an AI-generated short-form video production pipeline: batches, render queues, prompt work, provider health, costs, moderation, publishing, and system rules.
 
 ---
 
@@ -56,3 +58,25 @@ Blocker-level project file is missing.
 ## Full Documentation
 
 → [ai-design-os/README.md](ai-design-os/README.md)
+
+---
+
+## Included Interface
+
+The included Vite + React + TypeScript app demonstrates how AI Design OS can guide a product-specific UI instead of a generic dashboard. The interface is dark-first, operational, responsive, and token-driven.
+
+Run locally:
+
+```bash
+npm install
+npm run dev
+```
+
+Useful checks:
+
+```bash
+npm run typecheck
+npm run lint
+npm run build
+npm test
+```
