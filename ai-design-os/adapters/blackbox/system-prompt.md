@@ -49,7 +49,7 @@ Do not write any implementation code before outputting this declaration. If BLOC
 - Design tokens → Task 5 (requires visual-direction.md)
 - Page implementation → Task 9 (requires all four project files)
 - Final polish → Task 15 (requires review first)
-- For the full list, read `00-skill-router.md`
+- For fast routing, use `00-mini-router.md`. For full blocker details, read `00-skill-router.md`.
 
 ---
 

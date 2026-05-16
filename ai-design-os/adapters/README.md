@@ -45,7 +45,7 @@ Adapters do not contain design rules. Design rules live in the core files. Adapt
 
 1. Place the `/ai-design-os/` directory in or adjacent to your project repository so the agent can access it.
 2. Install the adapter for your agent (see each adapter's `install.md`).
-3. Before major UI implementation, create the required project design-system files for your task type. See `core/00-skill-router.md` for which files each task requires.
+3. Before major UI implementation, create the required project design-system files for your task type. See `runtime-packs/00-mini-router.md` for a fast summary, or `core/00-skill-router.md` for full blocker details.
 
 ---
 

@@ -68,7 +68,7 @@ Do not write any implementation code before outputting this declaration. If BLOC
 - Design system update → Task 22 (design-tokens + component-map + visual-direction: Blocker)
 - Component library → Task 23 (design-tokens + component-map + visual-direction: Blocker)
 
-For the complete routing table, read `/ai-design-os/core/00-skill-router.md`.
+For fast routing, use `/ai-design-os/runtime-packs/00-mini-router.md`. For the complete routing table with full blocker details, read `/ai-design-os/core/00-skill-router.md`.
 
 ---
 

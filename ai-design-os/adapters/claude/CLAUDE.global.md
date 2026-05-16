@@ -10,18 +10,39 @@ The AI Design OS is located at: `/ai-design-os/` relative to the project root (a
 
 ## Before Every UI Task
 
+If the `/ai-design-os/` directory does not exist in the current project, skip this entire section and proceed normally. This adapter is inactive for projects that have not installed AI Design OS.
+
 Before writing any code for a UI-related task:
 
-1. Read `{project-root}/ai-design-os/core/00-skill-router.md`
-2. Identify the task type from the routing table
-3. Read all required core files listed for that task type
-4. Locate and read all required project files listed for that task type
-5. Write the pre-implementation plan defined in `01-agent-operating-protocol.md`
-6. Do not write code until the plan is complete
-
-If the `/ai-design-os/` directory does not exist in the current project, skip this behavior and proceed normally. This adapter is inactive for projects that have not installed AI Design OS.
+1. Read `{project-root}/ai-design-os/runtime-packs/00-mini-router.md`
+2. Identify the task type and which pack or core files to read
+3. **Implementation tasks** (Tasks 8, 9, 10, 17, 18) → read `runtime-packs/pack-implementation.md` + required project files
+4. **Specialized tasks** (Tasks 19, 20, 21, 23) → read `pack-implementation.md` + `pack-specialized.md` + required project files
+5. **Review tasks** (Tasks 11, 12, 13, 14) → read `pack-review.md` + required project files
+6. **Polish/QA tasks** (Tasks 15, 16) → read `pack-polish.md`
+7. **Setup tasks** (Tasks 1–7) and **design system updates** (Task 22) → read core files per the mini-router table
+8. Write the pre-implementation plan (format is defined inside each pack; for setup tasks use `01-agent-operating-protocol.md`)
+9. Do not write code until the plan is complete
 
 If any Blocker-level project file is missing: stop, explain what is missing and why it matters, and request it before proceeding. Do not invent values.
+
+---
+
+## Before Writing Any Code
+
+After completing the pre-implementation plan, output exactly one of:
+
+```
+PROCEED — all required files confirmed present, plan complete.
+```
+
+```
+BLOCKED — [specific file] missing. [Explain what is needed and why.]
+```
+
+Do not write any implementation code before outputting this declaration.
+If BLOCKED: stop and wait for the user to resolve the missing requirement.
+The user must see this declaration before implementation begins.
 
 ---
 
