@@ -8,7 +8,7 @@ set -euo pipefail
 
 IMPL_PATTERN='\.(tsx|ts|jsx|js|vue|svelte|css|scss)$'
 SKIP_PATTERN='(\.test\.|\.spec\.|\.stories\.|__tests__/|docs/|scripts/|node_modules/)'
-HEX_PATTERN='#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b'
+HEX_PATTERN='#[0-9a-fA-F]{8}\b|#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b'
 
 if [[ "${1:-}" == "--staged" ]] || git rev-parse --git-dir > /dev/null 2>&1; then
   STAGED_FILES=$(git diff --cached --name-only 2>/dev/null || true)
@@ -38,19 +38,24 @@ while IFS= read -r FILE; do
     continue
   fi
 
-  LINENO=0
+  LNUM=0
   while IFS= read -r LINE; do
-    LINENO=$((LINENO + 1))
+    LNUM=$((LNUM + 1))
     TRIMMED="${LINE#"${LINE%%[![:space:]]*}"}"
 
-    # Skip comment lines
+    # Skip full comment lines
     if [[ "$TRIMMED" == //* || "$TRIMMED" == "/*"* || "$TRIMMED" == "*"* || "$TRIMMED" == "<!--"* ]]; then
       continue
     fi
 
-    if echo "$LINE" | grep -qE "$HEX_PATTERN"; then
-      MATCHES=$(echo "$LINE" | grep -oE "$HEX_PATTERN" | tr '\n' ' ')
-      VIOLATIONS+=("  $FILE:$LINENO — $MATCHES")
+    # Strip single-line trailing comments before scanning so hex inside
+    # a `// ...`, `/* ... */`, or `<!-- ... -->` comment is not flagged.
+    # Multi-line block comments are a known limitation of this safety net.
+    CODE=$(echo "$LINE" | sed -E 's@//.*@@; s@/\*.*\*/@@; s@<!--.*-->@@')
+
+    if echo "$CODE" | grep -qE "$HEX_PATTERN"; then
+      MATCHES=$(echo "$CODE" | grep -oE "$HEX_PATTERN" | tr '\n' ' ')
+      VIOLATIONS+=("  $FILE:$LNUM — $MATCHES")
     fi
   done < "$FILE"
 

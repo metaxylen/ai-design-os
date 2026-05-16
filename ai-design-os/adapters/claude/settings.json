@@ -2,8 +2,13 @@
   "hooks": {
     "PreToolUse": [
       {
-        "type": "command",
-        "command": "ai-design-os/scripts/preflight.sh"
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ai-design-os/scripts/preflight.sh"
+          }
+        ]
       }
     ]
   }
