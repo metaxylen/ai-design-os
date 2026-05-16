@@ -8,6 +8,34 @@ This file does not replace the core skill files. It describes what happens at ea
 
 ---
 
+## Step ↔ Task Cross-Reference
+
+This workflow covers the primary 15-step linear flow. The router (Tasks 1–23) covers all task types, including specialized tasks not in this linear sequence.
+
+| Workflow Step | Router Task | Description |
+|---|---|---|
+| Step 1 | Task 2 | Product Brief |
+| Step 2 | Task 3 | Reference Analysis |
+| Step 3 | Task 4 | Visual Direction |
+| Step 4 | Task 5 | Design Tokens |
+| Step 5 | Task 6 | Component Map |
+| Step 6 | Task 7 | Page Architecture |
+| Step 7 | — | Implementation Planning (part of every task via `01`) |
+| Step 8 | Task 8 | Component Implementation |
+| Step 9 | Task 9 | Page Assembly / Implementation |
+| Step 10 | Task 11 | Interaction State Pass |
+| Step 11 | Task 12 | Responsive Pass |
+| Step 12 | Task 13 | Accessibility Pass |
+| Step 13 | Task 14 | Anti-AI-Aesthetic Review |
+| Step 14 | Task 15 | Final Polish |
+| Step 15 | Task 16 | Visual QA |
+
+Specialized tasks (Tasks 17–23) do not fit this linear sequence. See the Specialized Task Types section at the end of this file.
+
+---
+
+---
+
 ## Step 1 — Product UI Brief
 
 ### Purpose
@@ -118,6 +146,9 @@ Must include all 12 required token categories defined in `06-design-token-rules.
 
 ### Quality Gate
 All token names are semantic — they express role and intent, not color or measurement. Token values are consistent with `visual-direction.md`. No raw hex, arbitrary spacing, or one-off radius values appear in any implementation that follows.
+
+### Change Management Note
+If tokens are changed after initial creation, classify the change (Additive / Breaking / Structural) and run the cascade audit per `16-change-management-rules.md` before updating any implementation. A token change is a design system change — not a local edit.
 
 ### Common Failure Prevented
 Agent hardcodes visual decisions inside components, causing design drift and inconsistency across the product.
@@ -447,7 +478,9 @@ core/00-skill-router.md
 
 The router identifies the task type and lists exactly which core files to read and which project files are required. Do not skip the router. Do not guess.
 
-The routing table covers 23 active task types (Tasks 1–23). Tasks 24 (adapter creation) and 25 (project template creation) are deferred to a later phase.
+The routing table covers 23 active task types (Tasks 1–23). Task 24 (adapter creation) and Task 25 (project template creation) are complete.
+
+For faster task routing and reduced context load during implementation, use `runtime-packs/00-mini-router.md` instead of reading the full `00-skill-router.md`.
 
 ---
 
@@ -463,33 +496,20 @@ Before starting, read `/ai-design-os/core/00-skill-router.md`, classify this tas
 
 ## Target Agent Ecosystem
 
-The current target agents for future adapter support are:
+The workflow is agent-agnostic. Any capable agent that can read markdown files can follow this workflow.
 
-- Claude
-- Codex
-- Antigravity
-- Blackbox
-- MiniMax
-- Cursor
+Adapters are complete. Each adapter packages the core routing behavior in the target agent's native persistent-instruction format. See `/ai-design-os/adapters/` for installation instructions.
 
-The workflow itself is agent-agnostic. These names represent the roadmap for adapter files — not dependencies of the core workflow. Any capable agent that can read markdown files can follow this workflow.
+| Agent | Adapter | Status |
+|-------|---------|--------|
+| Claude Code | `adapters/claude/CLAUDE.md` | Complete |
+| Cursor | `adapters/cursor/.cursorrules` | Complete |
+| OpenAI Codex | `adapters/codex/AGENTS.md` | Complete |
+| Antigravity | `adapters/antigravity/AGENTS.md` | Complete |
+| Blackbox AI | `adapters/blackbox/.blackboxhints` | Complete |
+| MiniMax | `adapters/minimax/system-prompt.md` | Complete (manual load — no native file format) |
 
----
-
-## Future Adapter Direction
-
-Future adapters should translate the same core workflow into each agent's native persistent-instruction mechanism. Adapters must not create separate rule systems — they must package the existing core behavior in a format each agent can load automatically.
-
-Planned adapters (do not create now):
-
-- Claude adapter
-- Codex adapter
-- Antigravity adapter
-- Blackbox adapter
-- MiniMax adapter
-- Cursor adapter
-
-Exact adapter file formats and mechanisms will be determined during the adapter phase by reviewing each agent's official documentation. Do not assume or hardcode adapter formats in this phase.
+Adapters do not create separate rule systems. They package the existing core behavior in a format each agent can load automatically. If a new agent is added to the roadmap, a new adapter must be created — the core files must not be modified to accommodate agent-specific behavior.
 
 ---
 
@@ -526,6 +546,24 @@ A UI task is complete only when all of the following conditions are true:
 - [ ] `14-design-review-checklist.md` was run and all Critical issues are resolved.
 - [ ] Post-implementation report was produced.
 - [ ] No do-not-ship conditions remain active.
+
+---
+
+## Specialized Task Types
+
+These tasks do not fit the 15-step linear sequence. They have their own entry conditions and required files. Route them via `00-skill-router.md`.
+
+| Task | Description | Key Entry Condition |
+|---|---|---|
+| Task 1 | New Project Design Setup | Creates all 5 project files. Runs Steps 1–6 in one task. |
+| Task 10 | Redesign / Cleanup | Entry point when existing UI needs structural fixes, not new UI. Requires visual-direction + design-tokens + page-architecture (Major Risk each). |
+| Task 17 | Mobile App UI | All 5 project files: Blocker. Mobile-first implementation from the start — not a responsive adaptation pass. |
+| Task 18 | Desktop App UI | All 5 project files: Blocker. Keyboard-first, multi-pane layout patterns required. |
+| Task 19 | Landing Page | product-brief + visual-direction + design-tokens: Blocker. Anti-AI aesthetic rules apply at maximum severity. |
+| Task 20 | Data-Heavy Dashboard / Table / Chart | design-tokens + component-map: Blocker. Every chart and table section requires full data states. |
+| Task 21 | Form-Heavy UI | No Blocker, but design-tokens + component-map are Major Risk. Every input requires a visible label. |
+| Task 22 | Design System Update | design-tokens + component-map + visual-direction: Blocker. Run `16-change-management-rules.md` before any token or component change. Classify the change, run cascade audit, produce migration report. |
+| Task 23 | Component Library Creation | design-tokens + component-map + visual-direction: Blocker. Build order: tokens → primitives → layout components → state components → domain components. |
 
 ---
 

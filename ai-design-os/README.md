@@ -75,14 +75,36 @@ Current structure:
     13-frontend-implementation-rules.md
     14-design-review-checklist.md
     15-final-polish-rules.md
+    16-change-management-rules.md
   workflow/
     full-workflow.md
+  adapters/
+    README.md
+    claude/
+      CLAUDE.md
+      CLAUDE.global.md
+      install.md
+    cursor/
+      .cursorrules
+      install.md
+    codex/
+      AGENTS.md
+      install.md
+    antigravity/
+      AGENTS.md
+      install.md
+    blackbox/
+      .blackboxhints
+      system-prompt.md
+      install.md
+    minimax/
+      system-prompt.md
+      install.md
 ```
 
 Deferred — do not create:
 
 ```
-/adapters/              future adapter support per agent platform
 /project-templates/     future starter design-system file sets
 ```
 
@@ -248,7 +270,7 @@ Exception approvals — patterns normally forbidden but approved for a specific 
 
 **Stack:** AI Design OS works with any capable frontend stack. No single framework is mandated. When specific technologies appear in core files (React, Vue, Svelte, Next.js, Nuxt, Tailwind, shadcn/ui, Radix UI, CSS Modules, CSS-in-JS, SwiftUI, Flutter, Jetpack Compose, Electron, Tauri), they are examples only. Token discipline, component architecture, state requirements, responsive rules, and accessibility requirements apply regardless of the implementation stack.
 
-**Agent:** AI Design OS works with any capable AI coding agent. Core files are plain markdown that any agent can read and follow. Agent-platform-specific packaging is deferred to the adapters phase.
+**Agent:** AI Design OS works with any capable AI coding agent. Core files are plain markdown that any agent can read and follow. Agent-platform-specific packaging is available in `/adapters/` — see `adapters/README.md` for installation instructions.
 
 The system's quality constraints do not depend on a specific agent. They depend on the agent reading and following the core files before producing output.
 
@@ -256,16 +278,18 @@ The system's quality constraints do not depend on a specific agent. They depend 
 
 ## 15. Target Agent Ecosystem
 
-The current target agents for future adapter support are:
+Adapters are available for the following agents:
 
-- Claude
-- Codex
-- Antigravity
-- Blackbox
-- MiniMax
-- Cursor
+| Agent | Adapter format | Location |
+|-------|---------------|----------|
+| Claude Code | `CLAUDE.md` | `adapters/claude/` |
+| Cursor | `.cursorrules` | `adapters/cursor/` |
+| OpenAI Codex | `AGENTS.md` | `adapters/codex/` |
+| Antigravity | `AGENTS.md` | `adapters/antigravity/` |
+| Blackbox AI | `.blackboxhints` / system prompt | `adapters/blackbox/` |
+| MiniMax | system prompt | `adapters/minimax/` |
 
-Core files are shared across all agents. Adapter files do not yet exist. When created, adapters must translate the same core behavior into each agent's native persistent-instruction format — not create a separate or contradictory rule system. If a new agent is added to the roadmap later, it must be added explicitly. Adapters and core must remain in sync.
+Core files are shared across all agents. Adapters translate the same core behavior into each agent's native persistent-instruction format — they do not create a separate or contradictory rule system. If a new agent is added to the roadmap, a new adapter must be created and the core behavior must remain unchanged. Adapters and core must remain in sync.
 
 ---
 
@@ -292,7 +316,7 @@ The current core supports:
 
 Do not create these files now. They are intentionally deferred.
 
-- **Agent adapters** — Claude, Codex, Antigravity, Blackbox, MiniMax, and Cursor adapter files that package core behavior into each agent's native instruction format.
+- **Agent adapters** — COMPLETE. Claude, Codex, Antigravity, Blackbox, MiniMax, and Cursor adapters are available in `/adapters/`. See `adapters/README.md`.
 - **Project templates** — Starter design-system file sets for common project types (SaaS dashboard, landing page, mobile app, desktop app, data-heavy dashboard).
 - **Visual QA automation recipes** — Integration guides for Playwright, Storybook, Chromatic, Percy, or equivalent tools.
 - **Framework-specific starter setups** — Stack-specific token implementation starters.

@@ -47,7 +47,11 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 
 ## Task Routing Table
 
+For fast routing without reading this full file, use `runtime-packs/00-mini-router.md`.
+
 ---
+
+### — SETUP TASKS —
 
 ### Task 1 — New Project Design Setup
 
@@ -149,6 +153,8 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 
 ---
 
+### — IMPLEMENTATION TASKS —
+
 ### Task 8 — Component Implementation
 
 **Required Core Files:**
@@ -190,6 +196,8 @@ Severity levels are defined in `01-agent-operating-protocol.md`. Summary:
 **Fallback Behavior:** If project design system files are missing, create them before redesigning. Do not redesign without reference constraints — that creates more AI aesthetic drift, not less.
 
 ---
+
+### — REVIEW TASKS —
 
 ### Task 11 — Interaction State Pass
 
@@ -292,6 +300,8 @@ Visual QA Report:
 
 ---
 
+### — SPECIALIZED IMPLEMENTATION TASKS —
+
 ### Task 17 — Mobile App UI Task
 
 **Required Core Files:**
@@ -366,15 +376,15 @@ Visual QA Report:
 ### Task 22 — Design System Update Task
 
 **Required Core Files:**
-`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md`, `07-typography-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `14-design-review-checklist.md`
+`00-skill-router.md`, `01-agent-operating-protocol.md`, `06-design-token-rules.md`, `07-typography-rules.md`, `08-layout-system-rules.md`, `09-component-architecture-rules.md`, `14-design-review-checklist.md`, `16-change-management-rules.md`
 
 **Required Project Files:** `design-tokens.md` *(Blocker)*, `component-map.md` *(Blocker)*, `visual-direction.md` *(Blocker)*
 
-**Expected Output:** Updated project design system files. Impact analysis. Component audit for consistency.
+**Expected Output:** Updated project design system files. Change classified as Additive / Breaking / Structural per `16-change-management-rules.md`. Impact cascade audit completed for all affected files. Migration report saved to `/docs/reviews/change-migration-report.md` (Breaking and Structural changes only).
 
 **Do-Not-Start Condition:** All three required project files must exist. Cannot update a design system that has not been created.
 
-**Fallback Behavior:** Create all three required project files first. After any token or visual direction change, audit existing components for consistency before proceeding.
+**Fallback Behavior:** Create all three required project files first. After any token or visual direction change, classify the change and follow the cascade audit protocol in `16-change-management-rules.md` before proceeding to implementation.
 
 ---
 
@@ -392,19 +402,19 @@ Visual QA Report:
 
 ---
 
+### — SYSTEM TASKS —
+
 ### Task 24 — Agent Adapter Creation Task
 
-**Status: LATER PHASE — DO NOT EXECUTE IN CURRENT PRODUCTION CYCLE.**
+**Status: COMPLETE.**
 
-This task creates agent-platform-specific adapter files in `adapters/`. It is deferred to a later cycle. Do not route this task. Do not create placeholder files.
+Adapter files exist in `/ai-design-os/adapters/` for: Claude Code, Cursor, OpenAI Codex, Antigravity, Blackbox AI, and MiniMax. See `adapters/README.md` for installation instructions.
 
 ---
 
 ### Task 25 — Project Template Creation Task
 
-**Status: LATER PHASE — DO NOT EXECUTE IN CURRENT PRODUCTION CYCLE.**
-
-This task creates starter design system files for common project types in `project-templates/`. It is deferred to a later cycle. Do not route this task. Do not create placeholder files.
+**Status: COMPLETE.** Starter templates exist in `ai-design-os/project-templates/` for: SaaS web app, mobile app, and landing page.
 
 ---
 
@@ -422,11 +432,4 @@ If a task cannot be clearly classified:
 
 ## Router Quality Gate
 
-Before proceeding with any task, verify:
-
-- [ ] Task type has been identified.
-- [ ] All required core files have been read.
-- [ ] All required project files have been located and read.
-- [ ] Missing files have been handled per fallback behavior and `01-agent-operating-protocol.md`.
-- [ ] Pre-implementation plan has been produced per `01-agent-operating-protocol.md`.
-- [ ] Task has not started implementation before this checklist is complete.
+Full checklist in `01-agent-operating-protocol.md` → Protocol Checklist section. Apply it before starting any task. Do not duplicate it here.
